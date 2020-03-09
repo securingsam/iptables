@@ -379,6 +379,7 @@ static struct xtables_target nfqueue_targets[] = {
 	.x6_options	= NFQUEUE_opts,
 	.xlate		= NFQUEUE_xlate_v2,
 },
+// workaround to make --queue-bypass work on 3.12.14: https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/net/netfilter?h=linux-3.12.y&id=09f041d02b9d5407d544d6fd5a9026072c44956f
 #if 0
 {
 	.family		= NFPROTO_UNSPEC,
